@@ -48,6 +48,7 @@ MIDDLEWARE = [
     "django.contrib.auth.middleware.AuthenticationMiddleware",
     "django.contrib.messages.middleware.MessageMiddleware",
     "django.middleware.clickjacking.XFrameOptionsMiddleware",
+    "django.middleware.locale.LocaleMiddleware",
 ]
 
 ROOT_URLCONF = "domicilioApp.urls"
@@ -108,13 +109,19 @@ AUTH_PASSWORD_VALIDATORS = [
 # Internationalization
 # https://docs.djangoproject.com/en/4.2/topics/i18n/
 
-LANGUAGE_CODE = "es-es"
+# LANGUAGE_CODE = "es-es"
 
-TIME_ZONE = "UTC"
+TIME_ZONE = 'America/Santiago'
 
 USE_I18N = True
 
 USE_TZ = True
+
+LANGUAGES = [
+    ('en', 'English'),
+    ('es', 'Spanish'),
+    # Agrega más idiomas si es necesario
+]
 
 
 # Static files (CSS, JavaScript, Images)
